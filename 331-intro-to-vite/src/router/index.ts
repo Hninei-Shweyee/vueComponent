@@ -13,25 +13,27 @@ const router = createRouter({
       component: EventListView
     },
     {
-      path: '/event/5928101',
+      path: '/event/:id',
       name: 'event-detail-view',
-      component: EventDetailView
+      component: EventDetailView,
+      props:true
    },
 
     {
       path: '/about',
-      name: 'about',
+      name: 'about-view',
       
       component: AboutView
     },
     {
       path: '/students',
-      name: 'students',
+      name: 'student-list-view',
       
       component: StudentListView
     }
 
   ],
+  
 })
 
 export default router
