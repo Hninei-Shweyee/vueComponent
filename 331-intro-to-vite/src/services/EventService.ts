@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'https://my-json-server.typicode.com/Hninei-Shweyee/mock-events/events',
+  baseURL: 'https://my-json-server.typicode.com/Hninei-Shweyee/mock-events/',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -11,7 +11,7 @@ const apiClient = axios.create({
 
 export default {
   getEvents() {
-    return apiClient.get('/')
+    return apiClient.get('/events')
   },
   getEvent(id:number){
     return apiClient.get('/events/'+ id)
