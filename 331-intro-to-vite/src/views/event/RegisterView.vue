@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { toRef } from 'vue'
+import { toRefs } from 'vue'
 import { type Event } from '@/types'
+import { useRouter } from 'vue-router';
 
 const props = defineProps<{
   event: Event
@@ -8,11 +9,17 @@ const props = defineProps<{
 }>()
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { event } = toRefs(props)
+const router =useRouter()
+const register=()=>{
+
+  router.push({name:'event-detail-view'})
+}
 
 </script>
 
 <template>
-  
+  <div>
     <p>Register event here</p>
-  
+    <button @click="register">Register</button>
+  </div>
 </template>
