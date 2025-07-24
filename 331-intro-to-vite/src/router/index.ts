@@ -6,7 +6,7 @@ import EventRegisterView from '@/views/event/RegisterView.vue'
 import EventEditView from '@/views/event/EditView.vue'
 import EventLayoutView from '@/views/event/LayoutView.vue'
 import StudentListView from '@/views/StudentListView.vue'
-// 
+import RegisterView from '@/views/RegisterView.vue'
 import EventNotFoundView from '@/views/event/NotFoundView.vue'
 import EventNetworkErrorView from '@/views/event/NetworkErrorView.vue'
 
@@ -76,6 +76,12 @@ children: [
       name: 'student-list-view',
       
       component: StudentListView
+    },
+    {
+      path: '/register',
+      name: 'register',
+
+      component: RegisterView
     }
 
   ],

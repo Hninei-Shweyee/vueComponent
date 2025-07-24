@@ -4,7 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import EventCard from '@/components/EventCard.vue'
 import { type Event } from '@/types'
 import EventService from '@/services/EventService'
- 
+import FlashMessage from '@/components/FlashMessage.vue'
 // Routing & Pagination
 const route = useRoute()
 const router = useRouter()
@@ -14,7 +14,8 @@ const page = computed(() => parseInt(route.query.page as string) || 1)
 const pageSize = computed(() => parseInt(route.query.pageSize as string) || 2)
  
 // Event state
-const events = ref<Event[] | null>(null)
+const events = ref<Event[]>([])
+const errorMessage = ref('')
 const totalEvents = ref(0)
  
 // Calculate total pages
@@ -33,6 +34,7 @@ watchEffect(() => {
     })
     .catch((error) => {
       console.error('There was an error!', error)
+       errorMessage.value = 'Failed to load events'
     })
 })
  
@@ -47,6 +49,7 @@ function updatePageSize(event: Event) {
 </script>
  
 <template>
+  <FlashMessage v-if="errorMessage" :message="errorMessage" />
   <h1>Events for Good</h1>
  
   <!-- Page Size Dropdown -->
