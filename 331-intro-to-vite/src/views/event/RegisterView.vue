@@ -6,22 +6,22 @@ import { useMessageStore } from '@/stores/message';
 
 const props = defineProps<{
   event: Event
-  id: String
+  
 }>()
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { event } = toRefs(props)
-const router =useRouter()
-const store = useMessageStore()
+const { event } = toRefs(props);
+const router =useRouter();
+const store = useMessageStore();
 const register=()=>{
 
-  store.updateMessage('You are successfully registered for ' + props.event.title)
+  store.updateMessage('You are successfully registered for ' + event.value.title)
 setTimeout(() => {
-  store.resetMessage()
+  store.resetMessage();
 }, 3000)
 
-router.push({ name: 'event-detail-view', params: { id: props.event.id } })
+router.push({ name: 'event-detail-view', params: { id: event.value.id } })
 
-}
+};
 
 </script>
 
@@ -31,3 +31,6 @@ router.push({ name: 'event-detail-view', params: { id: props.event.id } })
     <button @click="register">Register</button>
   </div>
 </template>
+
+
+

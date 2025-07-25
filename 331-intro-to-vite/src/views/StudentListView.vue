@@ -1,8 +1,7 @@
 
 <script setup lang="ts">
 import StudentCard from '@/components/StudentCard.vue'
-import type { Student } from '@/types'
-import FlashMessage from '@/components/FlashMessage.vue'
+//import type { Student } from '@/types'
 import { ref, onMounted } from 'vue'
 import StudentService from '@/services/StudentService'
 
