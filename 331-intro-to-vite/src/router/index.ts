@@ -8,7 +8,8 @@ import EventLayoutView from '@/views/event/LayoutView.vue'
 import StudentListView from '@/views/StudentListView.vue'
 import RegisterView from '@/views/event/RegisterView.vue'
 import EventNotFoundView from '@/views/event/NotFoundView.vue'
-import EventNetworkErrorView from '@/views/event/NetworkErrorView.vue'
+// If the file exists at src/views/NetworkErrorView.vue, update the import as follows:
+// import EventNetworkErrorView from '@/views/NetworkErrorView.vue'
 
 import { parse } from 'vue/compiler-sfc'
 import nProgress from 'nprogress'
@@ -89,11 +90,11 @@ children: [
   name: 'not-found',
   component: EventNotFoundView
 },
-{
-  path: '/network-error',
-  name: 'network-error-view',
-  component: EventNetworkErrorView
-},
+// {
+//   path: '/network-error',
+//   name: 'network-error-view',
+//   component: EventNetworkErrorView
+// },
 
     {
       path: '/students',
