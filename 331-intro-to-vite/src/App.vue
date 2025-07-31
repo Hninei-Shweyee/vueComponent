@@ -10,9 +10,18 @@
    <div class="text-center font-sans text-gray-700 antialias">
    <header>
      <div class="wrapper">
-       <nav>
-         <RouterLink to="/">Event</RouterLink> |
-         <RouterLink to="/about">About</RouterLink> |
+       <nav class="py-6">
+  <RouterLink class="font-bold text-gray-700"
+              exact-active-class="text-green-500"
+              :to="{ name: 'event-list-view' }">
+    Event
+  </RouterLink> |
+  <RouterLink class="font-bold text-gray-700"
+              exact-active-class="text-green-500"
+              :to="{ name: 'about-view' }">
+    About
+  </RouterLink> |
+         
          <RouterLink to="/students">Students</RouterLink> |
          <RouterLink to="/event/:id"></RouterLink>
        </nav>
