@@ -9,6 +9,7 @@ export interface Event {
   petsAllowed: boolean
   organizer: string
 }
+//deploy
 export interface EventState {
   event: Event | null;
 }
