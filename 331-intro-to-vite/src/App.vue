@@ -9,23 +9,25 @@
  <template>
    <div class="text-center font-sans text-gray-700 antialias">
    <header>
-    <div id="flashMessage" class="animate-fade" v-if="message">
+    <div v-if="message" class="animate-pulse bg-yellow-200 text-yellow-800 py-2 px-4 mb-4 rounded shadow inline-block">
       <h4>{{ message }}</h4>
     </div>
-     <div class="wrapper">
-       <nav class="py-6">
-  <RouterLink class="font-bold text-gray-700"
-              exact-active-class="text-green-500"
-              :to="{ name: 'event-list-view' }">
+     <div class="py-[30px]">
+       <nav class="space-x-2">
+  <RouterLink class="font-bold text-[#2c3e50]"
+            exact-active-class="text-[#42b983]"
+            :to="{ name: 'event-list-view' }">
     Event
   </RouterLink> |
-  <RouterLink class="font-bold text-gray-700"
-              exact-active-class="text-green-500"
-              :to="{ name: 'about-view' }">
+  <RouterLink class="font-bold text-[#2c3e50]"
+            exact-active-class="text-[#42b983]"
+            :to="{ name: 'about-view' }">
     About
   </RouterLink> |
          
-         <RouterLink to="/students">Students</RouterLink> |
+         <RouterLink class="font-bold text-[#2c3e50]"
+            exact-active-class="text-[#42b983]"
+            to="/students">Students</RouterLink> |
          <RouterLink to="/event/:id"></RouterLink>
        </nav>
      </div>
@@ -38,7 +40,7 @@
  <style>
 
 
-nav{
+/* nav{
   padding: 30px;
 }
 
@@ -53,7 +55,7 @@ nav a.router-link-exact-active {
 }
 h2{
   font-size:20px;
-}
+} */
 /* @keyframes yellofade {
   from {
     background-color: yellow;
