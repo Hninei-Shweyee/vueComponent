@@ -27,7 +27,11 @@ onMounted(() => {
 <template>
   <div>
     <!-- Flash message -->
-    <div v-if="message" id="flashMessage">
+    <div
+      v-if="message"
+      id="flashMessage"
+      class="animate-pulse bg-yellow-200 px-4 py-2 mb-4 rounded"
+    >
       <h4>{{ message }}</h4>
     </div>
 
@@ -38,7 +42,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-@keyframes yellofade {
+/* @keyframes yellofade {
   from {
     background-color: yellow;
   }
@@ -52,5 +56,5 @@ onMounted(() => {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-}
+} */
 </style>
