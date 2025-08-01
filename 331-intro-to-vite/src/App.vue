@@ -12,6 +12,7 @@
     <div v-if="message" class="animate-pulse bg-yellow-200 text-yellow-800 py-2 px-4 mb-4 rounded shadow inline-block">
       <h4>{{ message }}</h4>
     </div>
+    <h1>Deploy the Vercel</h1>
      <div class="py-[30px]">
        <nav class="space-x-2">
   <RouterLink class="font-bold text-[#2c3e50]"
