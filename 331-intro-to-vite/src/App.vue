@@ -7,6 +7,7 @@
  </script>
  
  <template>
+  <SpeedInsights/>
    <div class="text-center font-sans text-gray-700 antialias">
    <header>
     <div v-if="message" class="animate-pulse bg-yellow-200 text-yellow-800 py-2 px-4 mb-4 rounded shadow inline-block">
